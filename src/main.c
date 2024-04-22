@@ -66,7 +66,7 @@ void TIM14_IRQHandler (void){
 }
 
 
-/*
+
 void init_TIM3(void){
 	RCC -> AHBENR |= RCC_AHBENR_GPIOBEN;
 	GPIOB -> MODER |= GPIO_MODER_MODER4_1;
@@ -84,4 +84,4 @@ void init_TIM3(void){
 
 }
 
-*/
+
