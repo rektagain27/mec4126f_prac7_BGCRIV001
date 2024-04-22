@@ -51,7 +51,7 @@ void ResetClockTo48Mhz(void)
 }
 
 // INTERRUPT HANDLERS --------------------------------------------------------|
-/*
+
 void init_TIM14 (void) {
 	RCC -> APB1ENR |= RCC_APB1ENR_TIM14EN;
 	TIM14 -> ARR = 100;
@@ -64,7 +64,7 @@ void init_TIM14 (void) {
 void TIM14_IRQHandler (void){
 	TIM14 -> SR &= ~TIM_SR_UIF;
 }
-*/
+
 
 /*
 void init_TIM3(void){
