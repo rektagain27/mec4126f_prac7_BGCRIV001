@@ -61,8 +61,8 @@ void ResetClockTo48Mhz(void)
 
 void init_TIM14 (void) {
 	RCC -> APB1ENR |= RCC_APB1ENR_TIM14EN;
-	TIM14 -> ARR = 99;
-	TIM14 -> PSC = 47999;
+	TIM14 -> ARR = 73;
+	TIM14 -> PSC = 64864;
 	TIM14 -> DIER |= TIM_DIER_UIE;
 	TIM14 -> CR1 |=TIM_CR1_CEN;
 	NVIC_EnableIRQ(TIM14_IRQn);
@@ -93,13 +93,12 @@ void TIM14_IRQHandler(void){
 
 
 void init_TIM3(void){
-
     RCC->AHBENR |= RCC_AHBENR_GPIOBEN;
     GPIOB->MODER |= GPIO_MODER_MODER4_1 | GPIO_MODER_MODER5_1 | GPIO_MODER_MODER0_1 | GPIO_MODER_MODER1_1;
     GPIOB->AFR[0] |= 0x01 << (4 * 4) | 0x01 << (5 * 4) | 0x01 << (0 * 4) | 0x01 << (1 * 4);
     RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
 
-    TIM3->PSC = 47999;
+    TIM3->PSC = 23;
     TIM3->ARR = 99;
 
 
